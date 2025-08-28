@@ -408,9 +408,9 @@ def plot_processed_correlations_iterative(dataframes_dict, fit_function2, fit_x_
                     ax1.plot(x_data, y_fit_values, '-', alpha=opacity, 
                              color='gray', linewidth=1)
             
-            ax1.set_xlabel(r"$\tau$ [s]")
+            ax1.set_xlabel(r"lag time [s]")
             ax1.set_ylabel('g(2)-1')
-            ax1.set_title(f'[{plot_number}]: g(2)-1 vs. time for {name}')
+            ax1.set_title(f'[{plot_number}]: g(2)-1 vs. lag time for {name}')
             ax1.grid(True)
             ax1.set_xscale('log') 
             ax1.set_xlim(0, 10)
@@ -462,4 +462,5 @@ def calculate_mean_fit_metrics(results_df):
     mean_metrics['std_RMSE'] = valid_results['best_RMSE'].std()
     mean_metrics['std_AIC'] = valid_results['best_AIC'].std()
     
+
     return mean_metrics
