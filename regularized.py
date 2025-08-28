@@ -70,7 +70,7 @@ def nnls(df, name, nnls_params, plot_number):
     # First subplot: Data and optimized function
     ax1.semilogx(tau, D, 'ro', label='Data (D)')
     ax1.semilogx(tau, optimized_values, 'g-', label='Optimized Function (f_optimized)')
-    ax1.set_xlabel('tau')
+    ax1.set_xlabel('lag time [s]')
     ax1.set_ylabel('g(2)-1')
     ax1.set_title('Optimization Results')
     ax1.legend()
@@ -383,7 +383,7 @@ def nnls_reg(df, name, nnls_reg_params, plot_number):
     # First subplot: Data and optimized function
     ax1.semilogx(tau, D, 'ro', label='Data (D)')
     ax1.semilogx(tau, optimized_values, 'g-', label='Optimized Function (f_optimized)')
-    ax1.set_xlabel('tau')
+    ax1.set_xlabel('lag time [s]')
     ax1.set_ylabel('g(2)-1')
     ax1.set_title('Optimization Results')
     ax1.legend()
@@ -443,7 +443,7 @@ def nnls_reg(df, name, nnls_reg_params, plot_number):
     
     ax2.set_xlabel('Tau (Decay Times)')
     ax2.set_ylabel('Intensity (f_optimized)')
-    ax2.set_title('Tau Distribution with Peaks')
+    ax2.set_title('Tau Distribution')
     ax2.grid(True, which="both", ls="--")
     
     # Third subplot: Residuals
@@ -827,4 +827,5 @@ def plot_distributions(full_results, nnls_reg_params, df_basedata_mod,
     plt.tight_layout()
     plt.show()
     
+
     return fig, ax
