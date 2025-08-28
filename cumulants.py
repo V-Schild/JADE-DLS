@@ -434,9 +434,9 @@ def plot_processed_correlations(dataframes_dict, fit_function, fit_x_limits):
             #left plot: original data and fit
             ax1.plot(x_data, y_data, marker='.', linestyle='', label='Data')
             ax1.plot(x_data, y_fit_values, 'r-', label=f'Fit')
-            ax1.set_xlabel('time (s)')
+            ax1.set_xlabel('lag time (s)')
             ax1.set_ylabel(r"$\sqrt{g(2)-1}$")
-            ax1.set_title(f'[{plot_number}]: g(2)-1 vs. time for {name}')
+            ax1.set_title(f'[{plot_number}]: g(2)-1 vs. lag time for {name}')
             ax1.grid(True)
             ax1.set_yscale('log')
             ax1.set_xlim(0, 0.002)
@@ -473,3 +473,4 @@ def plot_processed_correlations(dataframes_dict, fit_function, fit_x_limits):
     
     final_results_df = pd.DataFrame(all_fit_results)
     return final_results_df
+
